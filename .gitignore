@@ -270,3 +270,4 @@ next-env.d.ts
 # E2E Chrome Extensions
 extensions
 
+publish.sh
