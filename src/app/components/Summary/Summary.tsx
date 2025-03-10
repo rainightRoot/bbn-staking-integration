@@ -54,7 +54,7 @@ export const Summary: React.FC<SummaryProps> = ({
   }, [btcHeight, globalParams]);
 
   return (
-    <div className="card flex flex-col gap-2 bg-base-300 p-4 shadow-sm xl:gap-4">
+    <div className="card flex flex-col gap-2 bg-base-400 p-4 shadow-sm xl:gap-4">
       <h3 className="mb-4 font-bold xl:mb-0">Your staking summary</h3>
       <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
         <div>

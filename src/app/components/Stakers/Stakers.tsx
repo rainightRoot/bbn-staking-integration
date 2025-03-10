@@ -42,7 +42,7 @@ export const Stakers: React.FC<StakersProps> = () => {
   }, [error, refetch, showError, hideError]);
 
   return (
-    <div className="card flex flex-col gap-2 bg-base-300 p-4 shadow-sm lg:flex-1">
+    <div className="card flex flex-col gap-2 bg-base-400 p-4 shadow-sm lg:flex-1">
       <h3 className="mb-4 font-bold">Top Stakers</h3>
       {stakersData && (
         <div className="hidden grid-cols-3 gap-2 px-4 text-sm lg:grid">

@@ -35,8 +35,14 @@ export const FAQ: React.FC<FAQProps> = () => {
     setParamWithCtx(paramsWithCtx);
   }, [globalParams, btcHeight]);
 
+  const style = {
+    width: "700px",
+    maxHeight: "1100px",
+    overflow: "auto",
+  };
+
   return (
-    <div className="container mx-auto flex flex-col gap-2 p-6">
+    <div className="container mx-auto flex flex-col gap-2 p-6" style={style}>
       <h3 className="mb-4 font-bold">FAQ</h3>
       <div className="flex flex-col gap-4">
         {questions(

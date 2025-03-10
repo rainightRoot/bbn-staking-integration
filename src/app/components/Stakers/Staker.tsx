@@ -18,7 +18,7 @@ export const Staker: React.FC<StakerProps> = ({
   const { coinName } = getNetworkConfig();
 
   return (
-    <div className="card border bg-base-300 p-4 text-sm dark:border-0 dark:bg-base-200">
+    <div className="card border bg-base-400 p-4 text-sm dark:border-0 dark:bg-base-200">
       <div className="mb-2 block lg:hidden">
         <Hash value={pkHex} address small noFade />
       </div>

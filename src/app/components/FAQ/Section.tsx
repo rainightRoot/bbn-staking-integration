@@ -9,15 +9,20 @@ interface SectionProps {
 
 export const Section: React.FC<SectionProps> = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const style = {
+    borderRadius: "50%",
+  };
   return (
     <div
-      className="card cursor-pointer border bg-base-300 p-4 dark:border-0"
+      className="card cursor-pointer border bg-base-400 p-4 dark:border-0"
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex items-center justify-between">
         <h4 className="font-bold">{title}</h4>
-        <button className="btn btn-square btn-sm border border-neutral-content bg-transparent">
+        <button
+          className="btn btn-square btn-sm border border-neutral-content bg-transparent"
+          style={style}
+        >
           {isOpen ? <FaMinus /> : <FaPlus />}
         </button>
       </div>

@@ -273,8 +273,9 @@ const Home: React.FC<HomeProps> = () => {
             connected={!!btcWallet}
           /> */}
         </div>
+        <FAQ />
       </div>
-      <FAQ />
+
       <Footer />
     </main>
   );

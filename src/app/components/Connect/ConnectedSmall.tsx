@@ -60,7 +60,7 @@ export const ConnectedSmall: React.FC<ConnectedSmallProps> = ({
           </div>
         </button>
         {showMenu && (
-          <div className="absolute top-0 z-10 mt-[4.5rem] flex flex-col gap-4 rounded-lg bg-base-300 p-4 shadow-lg w-full">
+          <div className="absolute top-0 z-10 mt-[4.5rem] flex flex-col gap-4 rounded-lg bg-base-400 p-4 shadow-lg w-full">
             <div className="flex items-center justify-between">
               <h3 className="font-bold dark:text-neutral-content">Settings</h3>
               <button

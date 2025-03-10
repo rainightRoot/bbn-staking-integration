@@ -172,7 +172,7 @@ export const Stats: React.FC = () => {
   ];
 
   return (
-    <div className="card flex flex-col gap-4 bg-base-300 p-1 shadow-sm lg:flex-row lg:justify-between">
+    <div className="card flex flex-col gap-4 bg-base-400 p-1 shadow-sm lg:flex-row lg:justify-between">
       {sections.map((section, index) => (
         <div
           key={index}

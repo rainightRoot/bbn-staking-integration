@@ -71,6 +71,14 @@ export const Footer: React.FC = () => {
       </div>
       <div className="flex justify-center gap-8 p-2">
         <a
+          href="https://babylonlabs.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors hover:text-primary"
+        >
+          Babylonlabs
+        </a>
+        <a
           href="https://babylonlabs.io/terms-of-use"
           target="_blank"
           rel="noopener noreferrer"
@@ -88,7 +96,7 @@ export const Footer: React.FC = () => {
         </a>
       </div>
       <div className="flex flex-wrap justify-center gap-8 p-4 pt-2 md:flex-row md:p-6 md:pt-2">
-        {iconLinks.map(({ name, url, Icon }) => (
+        {/* {iconLinks.map(({ name, url, Icon }) => (
           <div
             key={name}
             className="flex w-4 items-center justify-center text-[22px] text-xl"
@@ -102,7 +110,7 @@ export const Footer: React.FC = () => {
               <Icon title={name} />
             </a>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

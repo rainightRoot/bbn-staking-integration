@@ -29,7 +29,7 @@ export const FinalityProvider: React.FC<FinalityProviderProps> = ({
   website,
 }) => {
   const generalStyles =
-    "card relative cursor-pointer border bg-base-300 p-4 text-sm transition-shadow hover:shadow-md dark:border-transparent dark:bg-base-200";
+    "card relative cursor-pointer border bg-base-400 p-4 text-sm transition-shadow hover:shadow-md dark:border-transparent dark:bg-base-200";
 
   const { coinName } = getNetworkConfig();
 

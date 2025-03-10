@@ -39,7 +39,7 @@ export const PreviewModal: React.FC<PreviewModalProps> = ({
   awaitingWalletResponse,
 }) => {
   const cardStyles =
-    "card border bg-base-300 p-4 text-sm dark:border-0 dark:bg-base-200";
+    "card border bg-base-400 p-4 text-sm dark:border-0 dark:bg-base-200";
 
   const { coinName } = getNetworkConfig();
 
