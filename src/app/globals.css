@@ -117,3 +117,7 @@ body.modal-open {
   white-space: normal;
   word-wrap: break-word;
 }
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: #f8d000;
+}

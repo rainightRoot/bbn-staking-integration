@@ -60,7 +60,10 @@ export const ConnectSmall: React.FC<ConnectSmallProps> = ({
       </>
     );
   };
-
+  const style = {
+    backgroundColor: "#f8d000",
+    borderColor: "#f8d000",
+  };
   return address ? (
     <div className="relative mr-[-10px] text-sm hidden md:flex" ref={ref}>
       <button
@@ -126,6 +129,7 @@ export const ConnectSmall: React.FC<ConnectSmallProps> = ({
     <div className="flex items-center gap-1">
       <button
         className="btn-primary btn h-[2.5rem] min-h-[2.5rem] rounded-full px-2 text-white md:rounded-lg"
+        style={style}
         onClick={onConnect}
         // Disable the button if the user is already connected
         // or: API is not available, geo-blocked, or has an error

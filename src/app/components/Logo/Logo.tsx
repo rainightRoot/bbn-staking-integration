@@ -26,6 +26,11 @@ export const Logo: React.FC<LogoProps> = () => {
   }
   const style = {
     height: "40px",
+    width: "50px",
+  };
+  const style2 = {
+    marginTop: "10px",
+    marginLeft: "10px",
   };
   return (
     <div className="flex">
@@ -33,12 +38,14 @@ export const Logo: React.FC<LogoProps> = () => {
         href="https://equinoxdao.xyz"
         target="_blank"
         rel="noopener noreferrer"
+        className="flex"
       >
         <Image
           src={lightSelected ? darkLogo : lightLogo}
           alt="EquinoxDao"
           style={style}
         />
+        <span style={style2}>EquinoxDao</span>
       </a>
     </div>
   );

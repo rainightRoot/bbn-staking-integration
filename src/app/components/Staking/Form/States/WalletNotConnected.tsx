@@ -7,7 +7,10 @@ import walletIcon from "./wallet-icon.svg";
 
 export const WalletNotConnected = () => {
   const { open } = useWallet();
-
+  const style = {
+    borderColor: "#f8d000",
+    backgroundColor: "#f8d000",
+  };
   return (
     <div className="flex flex-1 flex-col">
       <div className="flex flex-1 flex-col items-center justify-center gap-2 py-12">
@@ -19,7 +22,7 @@ export const WalletNotConnected = () => {
           Please connect wallet to start staking
         </p>
       </div>
-      <button className="btn-primary btn" onClick={open}>
+      <button className="btn-primary btn" style={style} onClick={open}>
         <Image src={connectIcon} alt="Connect wallet" />
         Connect wallet
       </button>
