@@ -96,11 +96,14 @@ export const StakingTime: React.FC<StakingTimeProps> = ({
       onStakingTimeBlocksChange(numValue);
     }
   };
+  const style = {
+    fontSize: "12px",
+  };
 
   const isFixed = minStakingTimeBlocks === maxStakingTimeBlocks;
   if (isFixed) {
     return (
-      <div className="card mb-2 bg-base-200 p-4">
+      <div className="card mb-2 bg-base-200 p-4" style={style}>
         <p>
           You can unbond and withdraw your stake anytime with an unbonding time
           of {blocksToDisplayTime(unbondingTimeBlocks)}.

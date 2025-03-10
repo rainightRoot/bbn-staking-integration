@@ -2,8 +2,10 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import darkLogo from "@/app/assets/logo-black.svg";
-import lightLogo from "@/app/assets/logo-white.svg";
+import {
+  default as darkLogo,
+  default as lightLogo,
+} from "@/app/assets/equinox.svg";
 
 interface LogoProps {}
 
@@ -22,10 +24,22 @@ export const Logo: React.FC<LogoProps> = () => {
   if (!mounted) {
     return <div className="h-[40px] w-[159px]" />;
   }
-
+  const style = {
+    height: "40px",
+  };
   return (
     <div className="flex">
-      <Image src={lightSelected ? darkLogo : lightLogo} alt="Babylon" />
+      <a
+        href="https://equinoxdao.xyz"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={lightSelected ? darkLogo : lightLogo}
+          alt="EquinoxDao"
+          style={style}
+        />
+      </a>
     </div>
   );
 };

@@ -38,7 +38,6 @@ import type { UTXO } from "@/utils/wallet/wallet_provider";
 import { FeedbackModal } from "../Modals/FeedbackModal";
 import { PreviewModal } from "../Modals/PreviewModal";
 
-import { FinalityProviders } from "./FinalityProviders/FinalityProviders";
 import { StakingAmount } from "./Form/StakingAmount";
 import { StakingFee } from "./Form/StakingFee";
 import { StakingTime } from "./Form/StakingTime";
@@ -85,7 +84,21 @@ export const Staking: React.FC<StakingProps> = ({
   const [stakingAmountSat, setStakingAmountSat] = useState(0);
   const [stakingTimeBlocks, setStakingTimeBlocks] = useState(0);
   const [finalityProvider, setFinalityProvider] =
-    useState<FinalityProviderInterface>();
+    useState<FinalityProviderInterface>({
+      description: {
+        moniker: "EquinoxDAO",
+        identity: "048733E2C6061B87",
+        website: "https://www.equinoxdao.xyz",
+        securityContact: "wangzhaozhu1@gmail.com",
+        details: "professional Node Service Provider by EquinoxDAO",
+      },
+      commission: "0.03",
+      btcPk: "04439d165b72bac13c16a22744a55cb249615b23b769fc393188cd4eed33f189",
+      activeTVLSat: 25856000,
+      totalTVLSat: 46856000,
+      activeDelegations: 18,
+      totalDelegations: 23,
+    });
   const [finalityProviders, setFinalityProviders] =
     useState<FinalityProvider[]>();
   // Selected fee rate, comes from the user input
@@ -228,7 +241,7 @@ export const Staking: React.FC<StakingProps> = ({
 
   const handleResetState = () => {
     setAwaitingWalletResponse(false);
-    setFinalityProvider(undefined);
+
     setStakingAmountSat(0);
     setStakingTimeBlocks(0);
     setSelectedFeeRate(0);
@@ -568,9 +581,9 @@ export const Staking: React.FC<StakingProps> = ({
       );
     }
     // Staking cap reached
-    else if (overflow.overTheCapRange) {
-      return showOverflowWarning(overflow);
-    }
+    // else if (overflow.overTheCapRange) {
+    //   return showOverflowWarning(overflow);
+    // }
     // Staking form
     else {
       const {
@@ -610,7 +623,15 @@ export const Staking: React.FC<StakingProps> = ({
       return (
         <>
           <p>
-            <strong>Step-2:</strong> Set up staking terms
+            <span className="m-label">Moniker: </span>{" "}
+            <span className="m-value">
+              {finalityProvider.description.moniker}
+            </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="m-label">Commission: </span>{" "}
+            <span className="m-value">
+              {+finalityProvider.commission * 100}%
+            </span>
           </p>
           <div className="flex flex-1 flex-col">
             <div className="flex flex-1 flex-col">
@@ -648,9 +669,9 @@ export const Staking: React.FC<StakingProps> = ({
               <button
                 className="btn-primary btn mt-2 w-full"
                 disabled={!previewReady}
-                onClick={() => setPreviewModalOpen(true)}
+                onClick={handleSign}
               >
-                Preview
+                Stake
               </button>
               <Tooltip id="tooltip-staking-preview" className="tooltip-wrap" />
             </span>
@@ -680,13 +701,13 @@ export const Staking: React.FC<StakingProps> = ({
     <div className="card flex flex-col gap-2 bg-base-300 p-4 shadow-sm lg:flex-1">
       <h3 className="mb-4 font-bold">Staking</h3>
       <div className="flex flex-col gap-4 lg:flex-row">
-        <div className="flex flex-1 flex-col gap-4 lg:basis-3/5 xl:basis-2/3">
+        {/* <div className="flex flex-1 flex-col gap-4 lg:basis-3/5 xl:basis-2/3">
           <FinalityProviders
             onFinalityProvidersLoad={setFinalityProviders}
             selectedFinalityProvider={finalityProvider}
             onFinalityProviderChange={handleChooseFinalityProvider}
           />
-        </div>
+        </div> */}
         <div className="divider m-0 lg:divider-horizontal lg:m-0" />
         <div className="flex flex-1 flex-col gap-4 lg:basis-2/5 xl:basis-1/3">
           {renderStakingForm()}

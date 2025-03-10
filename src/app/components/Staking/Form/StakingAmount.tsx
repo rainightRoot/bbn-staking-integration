@@ -112,15 +112,24 @@ export const StakingAmount: React.FC<StakingAmountProps> = ({
     }
     setTouched(true);
   };
+  const style = {
+    marginLeft: "20px",
+  };
 
   const minStakeAmount = maxDecimals(satoshiToBtc(minStakingAmountSat), 8);
   const maxStakeAmount = maxDecimals(satoshiToBtc(maxStakingAmountSat), 8);
   return (
     <label className="form-control w-full flex-1">
       <div className="label pt-0">
-        <span className="label-text-alt text-base">Amount</span>
+        <span className="label-text-alt text-base">
+          Amount
+          <span className="label-text-alt opacity-50" style={style}>
+            min/max: {minStakeAmount}/{maxStakeAmount} {coinName}
+          </span>
+        </span>
+
         <span className="label-text-alt opacity-50">
-          min/max: {minStakeAmount}/{maxStakeAmount} {coinName}
+          Balance: {Number(btcWalletBalanceSat) / 100000000} {coinName}
         </span>
       </div>
       <input
