@@ -78,16 +78,9 @@ export const Footer: React.FC = () => {
         >
           Babylonlabs
         </a>
+
         <a
-          href="https://babylonlabs.io/terms-of-use"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="transition-colors hover:text-primary"
-        >
-          Terms of Use
-        </a>
-        <a
-          href="https://babylonlabs.io/privacy-policy"
+          href="https://www.equinoxdao.xyz/privacy-policy"
           target="_blank"
           rel="noopener noreferrer"
           className="transition-colors hover:text-primary"

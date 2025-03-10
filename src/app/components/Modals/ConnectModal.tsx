@@ -158,16 +158,7 @@ export const ConnectModal: React.FC<ConnectModalProps> = ({
                 <span className="label-text text-xs leading-snug md:text-sm">
                   I certify that I have read and accept the updated{" "}
                   <a
-                    href="https://babylonlabs.io/terms-of-use"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link link-primary"
-                  >
-                    Terms of Use
-                  </a>
-                  {" and "}
-                  <a
-                    href="https://babylonlabs.io/privacy-policy"
+                    href="https://www.equinoxdao.xyz/privacy-policy"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link link-primary"
