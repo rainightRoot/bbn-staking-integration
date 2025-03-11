@@ -39,7 +39,7 @@ export const StakingStatsProvider: React.FC<StakingStatsProviderProps> = ({
   const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ["API_STATS"],
     queryFn: async () => getStats(),
-    refetchInterval: 60000, // 1 minute
+    refetchInterval: 10000, // 1 minute
     retry: (failureCount) => {
       return !isErrorOpen && failureCount <= 3;
     },
