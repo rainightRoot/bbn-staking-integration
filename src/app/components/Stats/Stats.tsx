@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { Tooltip } from "react-tooltip";
@@ -181,7 +182,7 @@ export const Stats: React.FC = () => {
             <Fragment key={subSection.title}>
               <div className="flex items-center gap-2 md:flex-1 md:flex-col lg:flex-initial lg:flex-row flex-wrap justify-center">
                 <div className="flex items-center gap-2">
-                  {/* <Image src={subSection.icon} alt={subSection.title} /> */}
+                  <Image src={subSection.icon} alt={subSection.title} />
                   <div className="flex items-center gap-1">
                     <p className="dark:text-neutral-content">
                       {subSection.title}

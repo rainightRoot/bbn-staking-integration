@@ -27,8 +27,8 @@ export const ConnectModal: React.FC<ConnectModalProps> = ({
   connectDisabled,
 }) => {
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const [noInscription, setNoInscription] = useState(false);
-  const [noHWWallet, setNoHWWallet] = useState(false);
+  const [noInscription, setNoInscription] = useState(true);
+  const [noHWWallet, setNoHWWallet] = useState(true);
   const [selectedWallet, setSelectedWallet] = useState<string>("");
   const [mounted, setMounted] = useState(false);
 
@@ -169,7 +169,7 @@ export const ConnectModal: React.FC<ConnectModalProps> = ({
                 </span>
               </label>
             </div>
-            <div className="form-control">
+            {/* <div className="form-control">
               <label className="label cursor-pointer justify-start gap-2 rounded-xl bg-base-100 p-3 md:p-4">
                 <input
                   type="checkbox"
@@ -182,8 +182,8 @@ export const ConnectModal: React.FC<ConnectModalProps> = ({
                   wallet.
                 </span>
               </label>
-            </div>
-            <div className="form-control">
+            </div> */}
+            {/* <div className="form-control">
               <label className="label cursor-pointer justify-start gap-2 rounded-xl bg-base-100 p-3 md:p-4">
                 <input
                   type="checkbox"
@@ -199,7 +199,7 @@ export const ConnectModal: React.FC<ConnectModalProps> = ({
                   withdraw the stake.
                 </span>
               </label>
-            </div>
+            </div> */}
             <div className="mt-4 flex flex-col gap-4">
               <h3 className="text-center font-semibold">Choose wallet</h3>
               <div className="grid md:max-h-[20rem] grid-cols-1 gap-4 md:overflow-y-auto">

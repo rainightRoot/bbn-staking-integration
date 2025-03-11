@@ -69,7 +69,7 @@ input[type="number"] {
 /* tabs selection */
 .tab.tab-active:not(.tab-disabled):not([disabled]),
 .tab:is(input:checked) {
-  border-color: #ff7c2a;
+  border-color: #f8d000;
 }
 
 .divider:after,
