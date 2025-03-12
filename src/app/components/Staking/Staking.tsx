@@ -22,6 +22,7 @@ import {
   FinalityProvider as FinalityProviderInterface,
 } from "@/app/types/finalityProviders";
 import { getNetworkConfig } from "@/config/network.config";
+import pkjson from "@/pk.json";
 import {
   createStakingTx,
   signStakingTx,
@@ -86,18 +87,18 @@ export const Staking: React.FC<StakingProps> = ({
   const [finalityProvider, setFinalityProvider] =
     useState<FinalityProviderInterface>({
       description: {
-        moniker: "EquinoxDAO",
-        identity: "048733E2C6061B87",
-        website: "https://www.equinoxdao.xyz",
-        securityContact: "wangzhaozhu1@gmail.com",
-        details: "professional Node Service Provider by EquinoxDAO",
+        moniker: pkjson.description.moniker,
+        identity: pkjson.description.identity,
+        website: pkjson.description.website,
+        securityContact: pkjson.description.security_contact,
+        details: pkjson.description.details,
       },
-      commission: "0.03",
-      btcPk: "04439d165b72bac13c16a22744a55cb249615b23b769fc393188cd4eed33f189",
-      activeTVLSat: 25856000,
-      totalTVLSat: 46856000,
-      activeDelegations: 18,
-      totalDelegations: 23,
+      commission: pkjson.commission,
+      btcPk: pkjson.btc_pk,
+      activeTVLSat: pkjson.active_tvl,
+      totalTVLSat: pkjson.active_tvl,
+      activeDelegations: pkjson.active_delegations,
+      totalDelegations: pkjson.active_delegations,
     });
   const [finalityProviders, setFinalityProviders] =
     useState<FinalityProvider[]>();
@@ -659,7 +660,7 @@ export const Staking: React.FC<StakingProps> = ({
                 />
               )}
             </div>
-            {showApproachingCapWarning()}
+            {/* {showApproachingCapWarning()} */}
             <span
               className="cursor-pointer text-xs"
               data-tooltip-id="tooltip-staking-preview"

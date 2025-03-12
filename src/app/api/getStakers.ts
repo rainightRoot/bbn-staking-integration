@@ -30,7 +30,7 @@ export const getStakers = async (): Promise<Stakers> => {
 
     const response = await apiWrapper(
       "GET",
-      "/v1/stats/staker",
+      "/v2/stats/staker",
       "Error getting stakers",
       params,
     );

@@ -6,7 +6,6 @@ import { Tooltip } from "react-tooltip";
 import { useGlobalParams } from "@/app/context/api/GlobalParamsProvider";
 import { useBtcHeight } from "@/app/context/mempool/BtcHeightProvider";
 import { useHealthCheck } from "@/app/hooks/useHealthCheck";
-import { shouldDisplayPoints } from "@/config";
 import { getNetworkConfig } from "@/config/network.config";
 import { satoshiToBtc } from "@/utils/btcConversions";
 import {
@@ -17,7 +16,6 @@ import { maxDecimals } from "@/utils/maxDecimals";
 import { Network } from "@/utils/wallet/wallet_provider";
 
 import { LoadingSmall } from "../Loading/Loading";
-import { StakerPoints } from "../Points/StakerPoints";
 
 interface SummaryProps {
   loading?: boolean;
@@ -82,7 +80,7 @@ export const Summary: React.FC<SummaryProps> = ({
                 </p>
               </div>
             </div>
-            {isApiNormal && !isGeoBlocked && shouldDisplayPoints() && (
+            {/* {isApiNormal && !isGeoBlocked && shouldDisplayPoints() && (
               <>
                 <div className="divider xl:divider-horizontal xl:mx-4 my-0" />
                 <div className="flex flex-1 gap-2 text-sm flex-col xl:flex-row xl:items-center justify-start xl:justify-between">
@@ -105,7 +103,7 @@ export const Summary: React.FC<SummaryProps> = ({
                   </div>
                 </div>
               </>
-            )}
+            )} */}
             <div className="divider xl:divider-horizontal xl:mx-4 my-0" />
             <div className="flex flex-1 gap-1 text-sm flex-col xl:flex-row xl:items-center justify-start xl:justify-between">
               <div className="flex items-center gap-1 overflow-x-auto whitespace-nowrap">

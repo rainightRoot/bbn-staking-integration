@@ -71,6 +71,14 @@ export const Footer: React.FC = () => {
       </div>
       <div className="flex justify-center gap-8 p-2">
         <a
+          href="https://t.me/samwang123456"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors hover:text-primary"
+        >
+          Contact Us
+        </a>
+        <a
           href="https://babylonlabs.io/"
           target="_blank"
           rel="noopener noreferrer"

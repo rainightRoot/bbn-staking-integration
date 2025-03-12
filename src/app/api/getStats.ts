@@ -11,12 +11,12 @@ interface StatsAPI {
   total_tvl: number;
   active_delegations: number;
   total_delegations: number;
-  total_stakers: number;
+  active_stakers: number;
   unconfirmed_tvl: number;
 }
 
 export const getStats = async (): Promise<StakingStats> => {
-  const response = await apiWrapper("GET", "/v1/stats", "Error getting stats");
+  const response = await apiWrapper("GET", "/v2/stats", "Error getting stats");
   const statsAPIResponse: StatsAPIResponse = response.data;
   const statsAPI: StatsAPI = statsAPIResponse.data;
 
@@ -25,7 +25,7 @@ export const getStats = async (): Promise<StakingStats> => {
     totalTVLSat: statsAPI.total_tvl,
     activeDelegations: statsAPI.active_delegations,
     totalDelegations: statsAPI.total_delegations,
-    totalStakers: statsAPI.total_stakers,
+    totalStakers: statsAPI.active_stakers,
     unconfirmedTVLSat: statsAPI.unconfirmed_tvl,
   };
 };

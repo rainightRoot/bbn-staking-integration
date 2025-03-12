@@ -1,0 +1,14 @@
+{
+  "btc_pk": "1138064c255a4d8e3712f2854e67b0fc8109fed80d40d85bdd62b3f855777e65",
+  "state": "FINALITY_PROVIDER_STATUS_INACTIVE",
+  "description": {
+    "moniker": "Equinox",
+    "identity": "048733E2C6061B87",
+    "website": "https://www.equinoxdao.xyz",
+    "security_contact": "wangzhaozhu1@gmail.com",
+    "details": "professional Node Service Provider by EquinoxDAO"
+  },
+  "commission": "0.050000000000000000",
+  "active_tvl": 1103000,
+  "active_delegations": 3
+}

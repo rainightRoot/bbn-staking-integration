@@ -20,9 +20,7 @@ import { maxDecimals } from "@/utils/maxDecimals";
 
 import confirmedTvl from "./icons/confirmed-tvl.svg";
 import delegations from "./icons/delegations.svg";
-import pendingStake from "./icons/pending-stake.svg";
 import stakers from "./icons/stakers.svg";
-import stakingTvlCap from "./icons/staking-tvl-cap.svg";
 
 const buildNextCapText = (
   coinName: string,
@@ -127,11 +125,11 @@ export const Stats: React.FC = () => {
 
   const sections = [
     [
-      {
-        title: stakingCapText.title,
-        value: stakingCapText.value,
-        icon: stakingTvlCap,
-      },
+      // {
+      //   title: stakingCapText.title,
+      //   value: stakingCapText.value,
+      //   icon: stakingTvlCap,
+      // },
       {
         title: "Confirmed TVL",
         value: stakingStats?.activeTVLSat
@@ -139,18 +137,18 @@ export const Stats: React.FC = () => {
           : 0,
         icon: confirmedTvl,
       },
-      {
-        title: "Pending Stake",
-        value: stakingStats?.unconfirmedTVLSat
-          ? `${maxDecimals(satoshiToBtc(stakingStats.unconfirmedTVLSat - stakingStats.activeTVLSat), 8)} ${coinName}`
-          : 0,
-        icon: pendingStake,
-        tooltip:
-          stakingStats &&
-          stakingStats.unconfirmedTVLSat - stakingStats.activeTVLSat < 0
-            ? "Pending TVL can be negative when there are unbonding requests"
-            : undefined,
-      },
+      // {
+      //   title: "Pending Stake",
+      //   value: stakingStats?.unconfirmedTVLSat
+      //     ? `${maxDecimals(satoshiToBtc(stakingStats.unconfirmedTVLSat - stakingStats.activeTVLSat), 8)} ${coinName}`
+      //     : 0,
+      //   icon: pendingStake,
+      //   tooltip:
+      //     stakingStats &&
+      //     stakingStats.unconfirmedTVLSat - stakingStats.activeTVLSat < 0
+      //       ? "Pending TVL can be negative when there are unbonding requests"
+      //       : undefined,
+      // },
     ],
     [
       {
