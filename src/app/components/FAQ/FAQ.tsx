@@ -43,7 +43,10 @@ export const FAQ: React.FC<FAQProps> = () => {
 
   return (
     <div className="container mx-auto flex flex-col gap-2 p-6" style={style}>
-      <h3 className="mb-4 font-bold">FAQ</h3>
+      <div className="flex-box">
+        <div className="s-box">Phase 2</div>
+        <h3 className=" font-bold">FAQ</h3>
+      </div>
       <div className="flex flex-col gap-4">
         {questions(
           coinName,

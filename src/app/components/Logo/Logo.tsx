@@ -29,8 +29,11 @@ export const Logo: React.FC<LogoProps> = () => {
     width: "50px",
   };
   const style2 = {
-    marginTop: "10px",
     marginLeft: "10px",
+
+    fontSize: "26px",
+    fontFamily: "SF Pro Text",
+    fontWeight: "600",
   };
   return (
     <div className="flex">
@@ -45,7 +48,7 @@ export const Logo: React.FC<LogoProps> = () => {
           alt="EquinoxDao"
           style={style}
         />
-        <span style={style2}>EquinoxDao</span>
+        <span style={style2}>EQUINØX | DAO</span>
       </a>
     </div>
   );

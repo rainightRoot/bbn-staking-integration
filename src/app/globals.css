@@ -117,3 +117,16 @@ body.modal-open {
   --tw-bg-opacity: 1;
   background-color: #f8d000;
 }
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+}
+.s-box {
+  margin-bottom: 10px;
+  border: 2px solid rgb(248, 208, 0);
+  padding: 2px 4px;
+  border-radius: 8px;
+  width: 100px;
+  text-align: center;
+}
